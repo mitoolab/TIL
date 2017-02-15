@@ -1,4 +1,16 @@
 # DOM : 문서객체모델
+
+## * 중요
+  1. 순서 대상찾기 - 이벤트걸기 - 처리하기
+    - 이벤트의 흐름을 제어하는 것
+  2. DOM(document object Model) API(Application Programming Interface)
+    - Selection API  
+      - .getElementById()
+      - .getElementsByTagName()
+      - .getElementsByClassName() // IE 9+
+  3. DOM Script
+    - 문서객체모델을 이용하여 문소의 요소를 선택하고, 자바스크립트를 이용하여 이벤트 핸드링 및 조작하는 것.
+
 ## 1. DOM-스크립트 퓨리뷰
   - DOM과 JS를 통해 문서를 조작하고 제어하는 방법
   - CSS : 문서의 요소를 찾아서 꾸며주는 역활을 한다.
@@ -47,6 +59,54 @@
   - 마우스 이벤트는 "접근성이 없다." (키보드 접근성을 항상 고민해야한다.)
   - 찾고, 확인하고, 이벤트를 연결한다.
 
-## 중요
-  1. 대상찾기 - 이벤트걸기 - 처리하기
-    - 이벤트의 흐름을 제어하는 것
+## 7. DOM Level
+### Level 0
+  - 초창기, 1989년(?), 자바스크립트 1.0 시절, (레가시 돔)
+  - 웹 문서의 특정 요소에만 접근 가능
+  - 하이퍼링크(href, map 등), 이미지, 폼 필드
+  - 해당 요소의 속성을 교체할 수 있는 API 제공
+  - 폼 유효성 검사, 이미지 마우스 오버 효과 버튼 제작이 전부
+
+### 중급 DOM
+- intermediate DOM
+- ms와 네스케이프의 전쟁시기
+- css와 중급DOM이 현대 웹 디자인의 시초
+- 웹 문서의 대부분 요소에 접근
+- 해당 요소의 css속성을 조작할 수 있는 api 제공
+- document.all : 구시대의 유물, 익스만 지원
+
+### DOM Level 1
+  - 화합의 시대, 공동 표준 개발, 공식버전 1
+  - 1998년 표준화 작업 착수 (넷스케이프, ms)
+  - www.w3.org/TR/REC-DOM-LEVEL-1/
+    - chapter Level 1 (core, HTML) 확인
+      - core : XML 스타일 (모든 산업 공통)
+      - HTML : 웹 적용
+  - 브라우저 개발자들이 제작한 웹개발 문서를 바탕으로 제작하게 된다.
+
+### DOM Level 2
+  - 새로운 이벤트 모델의 개발방향에 따른 의견 충돌
+  - 2000년 발표 이후 널리 보급된 모델
+
+## DOM Level 3  
+
+## DOM Level 4
+  - 제이쿼리의 능력을 바탕으로 제작되어 기능 중 일부가 기본 기능으로 제공됨
+
+## W3C DOM properties
+  - properties : 모든 명사형태의 요소들
+  - method : 동사형태의 함수가 오프젝트를 만났을때 발생되는 현상
+
+## Node Interface
+  - 웹 문서를 구성하는 원자단위
+  - 객체 : 분자단위
+  - 1번 엘리먼드노드, 3번 텍스트 노드 중요
+  - 텍스트가 문서를 해석하면서 관계를 구축하는데 그것이 도큐먼트 오브젝트 모델이다. (DOM)
+  - 루트노드(html) - 노드 (모든것들)
+  - 프로퍼티 : 개체의 속성 . 으로 구분한다. ()가 붙지 않는다.
+
+## html DOM 방식
+  - document
+    - documentElement
+    - head
+    - body
