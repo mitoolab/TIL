@@ -51,3 +51,26 @@
       - 사용자가 사용하는 공간의 정보
       - availHeight
       - orientation : 모바일 대비 회전 제공
+
+#### 9. 종합
+* Bom
+  - global object -> window object
+    - document object
+    - navigator object
+      - userAgent
+      - geolocation
+    - screen object
+      - width
+      - availWidth
+    - location object
+      - hash
+      - protocol
+      - host
+      - pathname
+      - search
+      - href
+      - reload()
+    - history object
+      - back()
+      - go()
+      - forward()
