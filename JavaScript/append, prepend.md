@@ -10,7 +10,7 @@ function appendChild(parent_node, child_node) {
   return child_node;
 ```
 
-[MDN 바로가기]('https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild')
+[MDN 바로가기](https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild)
 
 ---  
 
@@ -26,7 +26,7 @@ function appendChild(parent_node, child_node) {
   }
   ```
 
-[MDN 바로가기]('https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/prepend')
+[MDN 바로가기](https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/prepend)
 
 ---
 

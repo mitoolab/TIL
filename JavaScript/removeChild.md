@@ -52,4 +52,4 @@ remove_btn.onclick = function() {
 
 ---
 
-[MDN 바로가기]('https://developer.mozilla.org/en-US/docs/Web/API/Node/removeChild')
+[MDN 바로가기](https://developer.mozilla.org/en-US/docs/Web/API/Node/removeChild)
