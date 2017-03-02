@@ -267,4 +267,10 @@
     - 대규모 병렬처리에 효과적
     - 서버, 대용량에 효과적
 
-#### OOP vs Functional Programming
+---  
+
+#### OOP vs Functional Programming  
+
+![image uploaded from ios](https://cloud.githubusercontent.com/assets/25189050/23506151/20c6c8b0-ff8a-11e6-91fa-ee63e18f704d.jpg)
+
+---
