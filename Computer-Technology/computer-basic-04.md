@@ -49,33 +49,33 @@
 
   - 서버로 요청 보내기
 
-```
-xhr = new XMLHttpRequest();
-var url = "http://192.168.1.245:8090/join"; /* <- URL 넣는 곳 */
-xhr.open("POST"/* <- HTTP Method 들어오는 곳 */, url, true);
-xhr.setRequestHeader("Content-type", "application/json")
+  ```
+  xhr = new XMLHttpRequest();
+  var url = "http://192.168.1.245:8090/join"; /* <- URL 넣는 곳 */
+  xhr.open("POST"/* <- HTTP Method 들어오는 곳 */, url, true);
+  xhr.setRequestHeader("Content-type", "application/json")
 
-- API Document
-  - 서버IP : 192.168.1.245
-  - POST : 8090
-  - Path : join
-- 회원가입
-  - HTTP Method : POST
-```
+  - API Document
+    - 서버IP : 192.168.1.245
+    - POST : 8090
+    - Path : join
+  - 회원가입
+    - HTTP Method : POST
+  ```
 
   - 요청을 다시 클라이언트로 보내기
 
-```
-xhr = new XMLHttpRequest();
-var url = "http://192.168.1.245:8090/user_info?user_id="+id; /* <- URL 넣는 곳 */
-xhr.open("GET"/* <- HTTP Method 들어오는 곳 */, url, true);
+  ```
+  xhr = new XMLHttpRequest();
+  var url = "http://192.168.1.245:8090/user_info?user_id="+id; /* <- URL 넣는 곳 */
+  xhr.open("GET"/* <- HTTP Method 들어오는 곳 */, url, true);
 
-- API Document
-  - 서버IP : 192.168.1.245
-  - POST : 8090
-  - Path : user_info
-  - id : 변수를 통해 작성된 ID값을 반환한다.
-```
+  - API Document
+    - 서버IP : 192.168.1.245
+    - POST : 8090
+    - Path : user_info
+    - id : 변수를 통해 작성된 ID값을 반환한다.
+  ```
 
 ---
 
@@ -178,18 +178,18 @@ xhr.open("GET"/* <- HTTP Method 들어오는 곳 */, url, true);
     - 라이브러리 : 기능의 묶음. 필요한것들을 가져오면 됨
     - 프레임워크 : 프로그램 사용 환경특성에 맞는 것을 선택하여 사용한다. 대부분 하나만 선택하여 사용한다.
 
-```
-< 비유 >
-- 프레임워크 : 국가(정부) 프레임워크의 하위 프레임워크 : 정부부처
-- API : 국가기관
-- 라이브러리 : 직무 전문가
-- 프로그래밍 언어 : 국가 통용 언어
-- 레퍼런스 문서 : 국가 조직도 및 기능설명서  
+    ```
+    < 비유 >
+    - 프레임워크 : 국가(정부) 프레임워크의 하위 프레임워크 : 정부부처
+    - API : 국가기관
+    - 라이브러리 : 직무 전문가
+    - 프로그래밍 언어 : 국가 통용 언어
+    - 레퍼런스 문서 : 국가 조직도 및 기능설명서  
 
-- Module 8 Framework + JS
-- Module8이라는 나라 모양에 내가 원하는 일을 할 수 있는 기업을 세우는 것
-- Module8이라는 나라에서는 JavaScript이라는 언어를 통해 의사소통 할 수 있다.
-```  
+    - Module 8 Framework + JS
+    - Module8이라는 나라 모양에 내가 원하는 일을 할 수 있는 기업을 세우는 것
+    - Module8이라는 나라에서는 JavaScript이라는 언어를 통해 의사소통 할 수 있다.
+    ```  
 
   - **다른점**
     - 디자인패턴
@@ -199,17 +199,17 @@ xhr.open("GET"/* <- HTTP Method 들어오는 곳 */, url, true);
       - 코드구조의 설계방식
       - MVC(Model-View-Controller), MVVM(Model-View-ViewModel), Observer, Singleton, Prototype....
       - SDK : 어떠한 프로그램을 사용하기 위한 소스의 종합 모음
-```
-< MVC (Model-View-Controller) >
-- View : 화면에서 보여지는 기능
-- Controller : 화면에서 발생한 이벤트를 Model로 전달
-- Model : Controller에서 전달된 이벤트를 Model에서 처리 후 Controller에게 전달하여 View에 반영한다.
-```  
-```  
-< Reference Document >
-- 레퍼런스 문서
-- API에 대해 서술해 놓은 문서
-```  
+      ```
+      < MVC (Model-View-Controller) >
+      - View : 화면에서 보여지는 기능
+      - Controller : 화면에서 발생한 이벤트를 Model로 전달
+      - Model : Controller에서 전달된 이벤트를 Model에서 처리 후 Controller에게 전달하여 View에 반영한다.
+      ```  
+      ```  
+      < Reference Document >
+      - 레퍼런스 문서
+      - API에 대해 서술해 놓은 문서
+      ```  
 
 #### 9) 객체지향 프로그래밍 패러다임
   - 객체지향 프로그래밍 : 객체는 속성과 행위를 가진다.
