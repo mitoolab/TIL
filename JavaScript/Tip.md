@@ -8,3 +8,11 @@
 
 ## JavaScript 적용 확인방법
   - 웹 브라우저 - 관리자도구 - console 창에서 작성
+
+## 정보
+- Vue.js : mvvc 모델
+- jQuery : DOM 조작에서 특화되었다.
+- Node.js : 우리는 개발환경 구성으로 사용
+  - 하나의 언어로 가능한 장점
+- 도서 : 자바스크립트 어플리케이션
+- 자바스크립트 가든 사이트 좋음 JavaScript (http://bonsaiden.github.io/JavaScript-Garden/ko/)
