@@ -1,4 +1,4 @@
-# 조건제어문 (if, switch, while)
+# 조건제어문 (if, switch, loop)
 ---
 - 조건을 통해서 제어
 - if, else, else if  
