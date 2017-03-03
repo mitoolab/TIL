@@ -1,4 +1,4 @@
-# 헬퍼함수 변경 -  makeEl
+# makeEl
 
 ---
 
