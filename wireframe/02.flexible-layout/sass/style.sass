@@ -1,0 +1,193 @@
+@import "font"
+
+html
+  font-size: 10px
+
++font('Spoqa Han Sans')
+
+.hidden, .skip-nav, legend, .mo-main-menu-icon
+  position: absolute
+  left: -9999em
+
+a
+  text-decoration: none
+
+a:link, a:visited
+  text-decoration: none
+  color: inherit
+
+ul
+  list-style: none
+  margin: 0
+  padding: 0
+
+body
+  margin: 0
+
+.header, .visual, .slogan, .footer, .main-content
+  margin: 0 auto
+  box-sizing: border-box
+
+.wrapper
+	min-width: 1300px
+	height: 100vh
+	margin: auto
+
+
+// extend
+
+
+
+
+
+// mixin
+
+=flex($content, $items)
+  display: flex
+  justify-content: $content
+  align-items: $items
+
+
+
+// =flex ($justify-content, $align-items, $flex-direction, $flex-wrap)
+//   display: flex
+//     flex-direction: $flex-direction
+//     flex-wrap: $flex-wrap
+//     justify-content: $justify-content
+//     align-items: $align-items
+
+
+// header
+header
+  width: 100%
+  background: #4d4b4a
+
+.header-view
+  max-width: 940px
+  margin: 0 auto
+  position: relative
+
+.logo
+  position: absolute
+  top: 26px
+
+.main-menu
+  +flex(center, center)
+  font-size: 1.4rem
+  // display: flex
+  // justify-content: center
+  // align-items: center
+  margin: 0
+
+.main-menu li
+  margin: 50px 30px
+  color: #ffffff
+
+.main-menu li > a:hover,
+.main-menu li > a:focus
+  color: #f3987b
+
+// content-01
+main
+  width: 100%
+  background: #f8d2c5
+
+.content-01
+  max-width: 940px
+  margin: auto
+  +flex(space-between, center)
+
+.content-01 button
+  border: none
+  background: none
+  margin: 136px 0 166px 0
+
+// content-02
+section
+  width: 940px
+  margin: auto
+
+.content-02
+  max-width: 940px
+  margin: 0 auto
+  position: relative
+
+.content-02-header
+  font-size: 2.5rem
+  // margin-top: 60px
+  +flex(center, center)
+
+hr
+  display: inline-block
+  background: #aaa
+  width: 35%
+
+.content-02-list
+  +flex(space-between, center)
+  flex-wrap: wrap
+
+.content-02-list ul a
+  font-size: 1.5rem
+
+.content-02-list ul p
+  font-size: 1.2rem
+  height: 50px
+  width: 286px
+  overflow: hidden
+  margin: 0 0 51px 0
+
+.mo-page-no
+  display: none
+
+// content-03
+
+.content-03
+  max-width: 940px
+  margin: auto
+  background: #f8d2c5
+
+.contect-03-list
+  +flex(space-between, center)
+
+.content-03 button
+  border: none
+  background: none
+  margin: 136px 0
+
+.page-no
+  background: #feb29a
+  height: 2px
+  width: 2px
+  border-radius: 50%
+
+// content-04
+
+.content-04
+  max-width: 940px
+  margin: 0 auto
+  position: relative
+
+.content-04-header
+  font-size: 2.5rem
+  margin-top: 60px
+  +flex(center, center)
+
+hr
+  display: inline-block
+  background: #aaa
+  width: 35%
+
+.content-04-list
+  +flex(space-between, center)
+  flex-wrap: wrap
+
+.content-04-list ul
+  +flex(space-between, center)
+  flex-wrap: nowrap
+
+.content-04-list li a
+  font-size: 1.5rem
+
+.content-04-list li p
+  font-size: 1.2rem
+  overflow: hidden

@@ -1,0 +1,143 @@
+@charset "UTF-8";
+@import "https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css";
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+/*스타일 초기화*/
+html,body,div,header,nav,section,aside,article,footer,figure,
+figcaption,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,p,fieldset{
+	margin:0;
+	padding:0;
+	border: none;
+}
+
+/*숨긴 콘텐츠*/
+.hidden, .skip-nav, legend {
+  position: absolute;
+  left: -9999em;
+}
+/*본문스타일*/
+html{
+  font-size: 10px;
+}
+body {
+  margin: 0;
+  font-size: 1.4rem;
+  font-family: 'Poppins', sans-serif;
+	line-height: 1.5;
+}
+a {
+  text-decoration: none;
+}
+a:link, a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  list-style: none;
+}
+.header, .visual, .slogan, .footer, .main-content{
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.wrapper{
+  width: 100%;
+	min-width: 1180px;
+	height: 100vh;
+	margin: auto;
+}
+
+/* 로고 */
+
+.header-intro {
+	width: 1140px;
+	background: tomato;
+	margin: 0 auto;
+}
+
+.logo {
+  display: flex;
+	display: inline-block;
+	background: red;
+	margin-top: 80px;
+}
+
+/* 메뉴 */
+
+.main-menu {
+  display: flex;
+	background: yellow;
+
+}
+.main-menu li {
+  float: left;
+  margin: 0 20px;
+}
+
+ /* 로그인 */
+
+.login {
+  float: right;
+  margin: 85px 150px 0 0;
+}
+.btn-signup {
+  padding: 10px 37px;
+  margin-left: 20px;
+  border: 1px solid rgb(3,166,123);
+  border-radius: 5px;
+  background: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: rgb(3,166,123);
+}
+
+/* main */
+
+.main {
+  /*height: 700px;*/
+  /*background: lime;*/
+  border-bottom: 1px solid #ebebeb;
+}
+
+.main-content {
+  width: 1140px;
+  background: pink;
+  display: table;
+  table-layout: fixed;
+}
+
+/*.main-content::after {
+  content: "";
+  display: block;
+  clear: both;
+}*/
+.main-box, .main-link {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.main-box {
+  /*float: left;
+  width: 560px;*/
+
+  /*width: 530px;
+  top: 240px;
+  left: 150px;*/
+}
+
+.main-link {
+  padding-left: 10px;
+  text-align: center;
+  background: yellow;
+  /*float: right;
+  width: 560px;
+  background: yellow;*/
+}
+
+.main-heading {
+  font-size: 52px;
+}
+
+.main-content p {
+  font-size: 16px;
+  color: #aaa;
+}
