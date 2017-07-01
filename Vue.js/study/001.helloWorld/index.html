@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Hellow World</title>
+  <script src="vue.js"></script>
+</head>
+<body>
+
+<!-- <div id="app">
+  <h1 v-once>{{ title }}</h1>
+  <p>{{ sayHello() }} - <a :href="link">google</a></p>
+  <hr>
+  <p v-html="finishedLink"></p>
+</div> -->
+
+<div id="exercise">
+  <p>VueJS is pretty cool - {{ name }} ({{ age }})</p>
+  <p>{{ age * 3 }}</p>
+  <p>{{ random() }}</p>
+  <div>
+    <img :src="image" style="width:100px, heigth:100px">
+  </div>
+  <div>
+    <input type="text" :value="name">
+  </div>
+</div>
+
+
+</body>
+
+
+<script>
+
+new Vue({
+	el: '#exercise',
+  data: {
+  	name: 'Max',
+    age: 33,
+    image: 'http://'
+  },
+  methods: {
+  	random: function() {
+    	return Math.random();
+    }
+  }
+});
+
+
+  // new Vue({
+  //   el: '#app',
+  //   data: {
+  //     title: 'Hello Wrold',
+  //     link: 'html://google.com',
+  //     finishedLink: '<a href="http://google.com">google</a>'
+  //   },
+  //   methods: {
+  //   	sayHello: function() {
+  //       this.title = 'Hello!';
+  //     	return this.title;
+  //     }
+  //   }
+  // });
+
+</script>
+</html>
