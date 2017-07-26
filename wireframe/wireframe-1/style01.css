@@ -227,12 +227,18 @@ ul {
   text-align: center;
   margin-bottom: 100px;
   padding-top: 100px;
+  position: relative;
 }
 
 .videoHeadig {
   font-size: 44px;
   line-height: 54px;
   margin-bottom: 40px;
+}
+
+#videoIframe {
+  position: absolute;
+  margin: 23px 67px;
 }
 
 /* try now  */
