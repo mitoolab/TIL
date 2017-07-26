@@ -1,7 +1,7 @@
 /* 2017 CSS Mitoo all rights reserved. */
 
 /* 스타일 초기화 */
-*, 
+*,
 *::before,
 *::after {
   margin: 0;
@@ -35,17 +35,17 @@ ul {
   list-style: none;
 }
 
-hr {
+/* hr {
   margin: 100px 0 ;
   border-bottom: 0px;
   border: 1px solid rgb(230, 230, 230);
-} 
+} */
 
 /* wrapper */
 
 .wrapper {
   max-width: 1200px;
-  min-width: 1150px;
+  min-width: 1200px;
   width: 100%;
 	margin: auto;
 }
@@ -58,6 +58,7 @@ hr {
 
 .headerLogo, .nav, .navList {
   display: inline-block;
+  vertical-align: -webkit-baseline-middle;
 }
 
 .navList {
@@ -65,7 +66,8 @@ hr {
 }
 
 .log {
-  float: right;
+  float: right; 
+  margin-top: -5px;
 }
 
 .logIn, .signUp {
@@ -88,7 +90,7 @@ hr {
 /* main */
 .main {
   position: relative;
-  margin-top: 68px;
+  margin: 68px 0 100px 0;
 }
 
 .main::after {
@@ -97,6 +99,7 @@ hr {
   clear: both;
 }
 
+/* 콘텐츠 세로 가운데 정렬 */
 .mainContent {
   position: absolute;
   top: 50%;
@@ -115,17 +118,17 @@ hr {
   margin: 27px 0 38px 0;
 }
 
-.mainSearch {
-  font-size: 0;
-}
-
 /****************************************
  * input 간격 줄이는 방법 *
 방법1) input 과 버튼에 float 을 주고 부모요소에 플롯해제
-방법2) input 과 버튼 부모요소에 font-size: 0; 을 주고 
+방법2) input 과 버튼 부모요소에 font-size: 0; 을 주고
       input 과 버튼에 font-size 제 선언
 방법3) 부모요소에 display: flex
 ****************************************/
+
+.mainSearch {
+  font-size: 0;
+}
 
 .mainSearchText {
   width: 290px;
@@ -137,6 +140,7 @@ hr {
   font-size: 14px;
 }
 
+/* input 내부 text 글자 색상 수정 */
 .mainSearchText::placeholder {
   color: rgb(154, 154, 154);
 }
@@ -161,15 +165,27 @@ hr {
 
 /* feature */
 
-.feature {
-  text-align: center;
-  margin-bottom: 200px;
-}
+/****************************************
+ * 마진 겹침 현상 *
+문제 ) 자기 자신의 마진 겹침,
+      엘리먼트가 컨텐츠로 시각적인 요소를 가지고 있지 않을 때
+      그 엘리먼트는 상하 마진 중 더 큰 값이 적용된다.
+      세로 방향의 border 나 padding 이 없다면 
+      해당 Element 의 높이는 그 자식 Element의 
+      상하 거리로 지정
+      (결국 큰 마진만 보인다)
 
-.feature::after {
-  content: "";
-  display: block;
-  clear: both;
+방법1) 패딩 요소로 간격을 설정한다.
+방법2) display: inline-block;를 설정한다.
+****************************************/
+
+.feature {
+  /* display: inline-block; */
+  /* margin-top: 100px; */
+  text-align: center;
+  margin-bottom: 100px;
+  padding-top: 100px;
+  border-top: 1px solid rgb(154, 154, 154);
 }
 
 .featureHeading {
@@ -186,11 +202,13 @@ hr {
 .featureListItem {
   display: inline-block;
   width: 310px;
+  margin: 0 40px 0 40px;
 }
 
-.featureListItem:nth-child(2n+2) {
+/* nth-child 이용하기 */
+/* .featureListItem:nth-child(2n+2) {
   margin: 0 80px;
-}
+} */
 
 .featureListItem > h3 {
   margin: 30px auto 27px;
@@ -205,8 +223,10 @@ hr {
 
 /* video */
 
-.video {
+ .video {
   text-align: center;
+  margin-bottom: 100px;
+  padding-top: 100px;
 }
 
 .videoHeadig {
@@ -219,6 +239,9 @@ hr {
 
 .tryNow {
   text-align: center;
+  margin-bottom: 100px;
+  padding-top: 100px;
+  border-top: 1px solid rgb(154, 154, 154);
 }
 
 .tryNowHaeding {
@@ -235,8 +258,9 @@ hr {
 }
 
 .tryNowBtn, .tryNowBtnColor {
-  width: 200px;
-  height: 50px;
+  /* width: 200px;
+  height: 50px; */
+  padding: 20px 80px;
   border-radius: 5px;
   font-size: 14px;
   margin: auto 3px;
@@ -260,13 +284,9 @@ hr {
 
 .outClients {
   text-align: center;
-  margin-bottom: 200px;
-}
-
-.outClients::after {
-  content: "";
-  display: block;
-  clear: both;
+  margin-bottom: 100px;
+  padding-top: 100px;
+  border-top: 1px solid rgb(154, 154, 154);
 }
 
 .outClientsHaeding {
@@ -283,11 +303,13 @@ hr {
 .outClientsListItem {
   display: inline-block;
   width: 284px;
+  margin: 0 50px 0 50px;
 }
 
-.outClientsListItem:nth-child(2n+2) {
+/* nth-child 이용하기 */
+/* .outClientsListItem:nth-child(2n+2) {
   margin: 0 100px;
-}
+} */
 
 .outClientName {
   margin: 30px auto 0;
@@ -312,13 +334,17 @@ hr {
 
 /* footer */
 
+/* clear: both 삭제 : 하위요소 없음 */
+
 .footer {
-  margin: 0 auto 70px auto;
+  margin: 60px auto 70px auto;
   text-align: center;
+  padding-top: 100px;
+  border-top: 1px solid rgb(154, 154, 154);
 }
 
 .smaill {
-  color : rgb(154, 154, 154);
+  color: rgb(154, 154, 154);
   font-size: 14px;
   float: left;
 }
