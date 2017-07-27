@@ -25,7 +25,7 @@ $ cd Repository이름
 ## 4. local에 원본(fork를 가져온 Repository) 저장소 주소 등록  
 - 원격 저장소(remote)를 upstream(저장소 이름)으로 add 하는 명령어  
 ```
-(master)$ git remote upstream https://github.com//youID/Repository이름
+(master)$ git remote add upstream https://github.com//youID/Repository이름
 ```
 
 - 등록된 원격 저장소를 확인하는 명령어  
