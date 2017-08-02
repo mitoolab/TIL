@@ -1,5 +1,5 @@
 2017.08.02(수)
-# Responsive Web Design
+# Responsive Web Development
 
 ## Padding-Bottom 을 활용한 크기가 고정된 박스 만들기 tip
 
