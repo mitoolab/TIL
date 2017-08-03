@@ -35,7 +35,7 @@
 }
 ```
 
-- layout 안정장치 : 콘텐츠가 `width`의 100% 차지하고 있지만 `float:left`로 정렬되어있기 때문에 안전장치로 작성한다.
+- layout 안전장치 : 콘텐츠가 `width`의 100% 차지하고 있지만 `float:left`로 정렬되어있기 때문에 안전장치로 작성한다.
 ```css
 .imagesWrapper::after {
   content: "";
