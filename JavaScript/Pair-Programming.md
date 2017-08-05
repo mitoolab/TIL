@@ -13,10 +13,10 @@
   - 자연스러운 코드 리뷰
   - 코드 공동 소유
   - 친밀도, 팀웍 상승
-  - 성장감
-
----js
-var fi = 0;
+  - 성장감 상승
+  
+```js
+var fi = 0;  
 for (var i = 0; i <= 30; ++i) {
   if (i % 15 === 0) {
     console.log("fizzbuzz");
@@ -28,5 +28,5 @@ for (var i = 0; i <= 30; ++i) {
     console.log(i);
   }
 };
---  
+```  
   
