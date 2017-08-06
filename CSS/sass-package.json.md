@@ -45,22 +45,22 @@
 
 ---
 
-- 변환 옵션(--output-style) 4가지  
-  - 1. `compact`    : 한 줄로 정리 (촘촘하게) 
+### 변환 옵션(--output-style) 4가지  
+- 1. `compact`    : 한 줄로 정리 (촘촘하게) 
 ```js
 #main {color: #fff; background-color: #000;}
-```
-  - 2. `compressed` : 압축 (공백없이) 
+```  
+- 2. `compressed` : 압축 (공백없이) 
 ```js
 #main{color:#fff;background-color:#000;}#main p{width:10em;}
 ```
-  - 3. `expanded`   : 확장  
+- 3. `expanded`   : 확장  
 ```js
 #main {
   color: #fff; background-color: #000;
 }
 ```
-  - 4. `nested`     : 중첩 (Default) 
+- 4. `nested`     : 중첩 (Default) 
  ```js
 #main {
   color: #fff; background-color: #000; }
