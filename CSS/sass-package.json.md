@@ -18,18 +18,18 @@
 ### 코드 내용
 ```json
 {
-  "name": "sass-basic-study", // json`을 설정한 코드블록의 이름
+  "name": "sass-basic-study",
   "version": "0.0.1",
   "description": "package",
   "scripts": {
-    "start": "npm run sass",  // 실행을 위한 입력 명령
-    "sass": "node-sass -w -r sass -o css --output-style expanded --source-map-embed", // 실행위치 및 설정
-    "sass-build": "node-sass -r scss -o css --output-style compressed"  // 생성 파일 설정
+    "start": "npm run sass",
+    "sass": "node-sass -w -r sass -o css --output-style expanded --source-map-embed",
+    "sass-build": "node-sass -r scss -o css --output-style compressed"
   }
 }
 ```
-
-> 주석 삭제 후 사용  
+ - `name` : `json`을 설정한 코드블록의 이름  
+ - `start`: 실행을 위한 입력 명령  
 
 ---
 
@@ -41,7 +41,6 @@
 - `dist/css` : ./css의 의미로 출력 장소 의미  
 - `-output-style` : 출력 스타일  
 - `source-map` : source-map 파일 생성  
-- `./map ` :  source-map 파일 생성 위치  
 
 
 > 변환 옵션(--output-style) 4가지  
