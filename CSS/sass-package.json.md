@@ -28,32 +28,47 @@
   }
 }
 ```
+
  - `name` : `json`을 설정한 코드블록의 이름  
  - `start`: 실행을 위한 입력 명령  
 
 ---
 
 ### 주요 단축 명령 설명
-- `-w` : `--watch` 파일 관찰  
-- `-r` : `--recursive` 하위 디렉토리/파일 포함 관찰  
-- `src/sass` : `./sass`의 의미로 관찰 장소를 의미  
-- `-o` : `-output` 출력 디렉토리 설정  
-- `dist/css` : ./css의 의미로 출력 장소 의미  
+- `-w` (--watch) : 파일 관찰  
+- `-r` (--recursive) : 하위 디렉토리/파일 포함 관찰  
+- `src/sass` : 관찰 장소를 의미  
+- `-o` (-output) : 출력 디렉토리 설정  
+- `dist/css` : 출력 장소 의미  
 - `-output-style` : 출력 스타일  
 - `source-map` : source-map 파일 생성  
 
+---
 
-> 변환 옵션(--output-style) 4가지  
->  1. `compact`    : 한 줄로 정리 (촘촘하게)  
->  2. `compressed` : 압축 (공백없이)  
->  3. `expanded`   : 확장  
->  4. `nested`     : 중첩   
+- 변환 옵션(--output-style) 4가지  
+  - 1. `compact`    : 한 줄로 정리 (촘촘하게) 
+```js
+#main {color: #fff; background-color: #000;}
+```
+  - 2. `compressed` : 압축 (공백없이) 
+```js
+#main{color:#fff;background-color:#000;}#main p{width:10em;}
+```
+  - 3. `expanded`   : 확장  
+```js
+#main {
+  color: #fff; background-color: #000;
+}
+```
+  - 4. `nested`     : 중첩 (Default) 
+ ```js
+#main {
+  color: #fff; background-color: #000; }
+ ```
 
 ---
 
 ### 주의 및 진행 방법
-- 생성된 `.jsone`파일은 **작업 폴더**내에 있어야 한다.
-- 지역에 영향을 주기 때문에 프로젝트폴더에 맞춰 복사하여 사용하여야 한다.
 - 프로젝트 폴더내에는 `src 폴더`안쪽에 `sass 폴더` 생성 후 `.scss` 파일을 생성한다.
 - 터미널 경로를 프로젝트 폴더로 이동 후 설정한 `start`명령어를 입력한다.
-- `.scss`파일을 변경하고 저장하면 자동으로 `dist 폴더`,`css 폴더`,`.css 파일` 생성된다.
+- `.scss`파일을 변경하고 저장하면 자동으로 `dist 폴더`,`css 폴더`,`.css 파일` 생성된다.  
