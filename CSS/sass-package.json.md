@@ -37,7 +37,7 @@
 - `-w` : `--watch` 파일 관찰  
 - `-r` : `--recursive` 하위 디렉토리/파일 포함 관찰  
 - `src/sass` : `./sass`의 의미로 관찰 장소를 의미  
-- `-o` : `` 출력 디렉토리 설정  
+- `-o` : `-output` 출력 디렉토리 설정  
 - `dist/css` : ./css의 의미로 출력 장소 의미  
 - `-output-style` : 출력 스타일  
 - `source-map` : source-map 파일 생성  
