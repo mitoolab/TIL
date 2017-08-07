@@ -1,0 +1,189 @@
+/* 2017 CSS Mitoo all rights reserved. */
+
+/* 스타일 초기화 */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ /* 숨긴 콘텐츠 */
+.hidden, .skip-nav, legend {
+  position: absolute;
+  left: -9999em;
+}
+
+/* 본문스타일 */
+body {
+  margin: 0;
+  font-size: 16px;
+  font-family: 'Spoqa Han Sans', 'Sans-serif';
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link, a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+.wrapper {
+  width: 100%;
+}
+
+/* image-box 시작 */
+/* 반응형 박스 제작 */
+
+/* 전체박스 레이아웃 구성 */
+/****************************************
+* padding-bottom을 활용한 반응형 사각박스 만들기 *
+widht %는 부모컨테이너의 폭을 기준
+heigth는 %는 컨테이너의 세로높이 기준
+- 항상 크기가 유지되는 사각형을 얻기 힘들다.
+
+해결방법) padding-bottom 컨테이너
+패딩값은 컨테이너의 넓이값을 기준으로 하며 width속성과 동일함
+
+내부의 콘텐츠를 배치할 때 콘텐츠의 절대높이로 기준을 잡기 위해
+position:relative를 사용한다.
+
+보여주고자 하는 이미지의 상위 레이어에 해당 크기의 패딩박스를 만들어
+보여주고 싶은 것을 선택할 수 있다.
+
+크기와 관계없이 정사각형(직사각형)을 만들 수 있음
+비율이 유지될 수 있음
+
+주의) 콘텐츠를 삽입하면 콘텐츠의 높이만큼 패딩이 늘어남
+해결) 콘텐츠를 absolute하여 해결한다.
+****************************************/
+
+/* 초기 : 내부 이미지는 왼쪽 상단으로 정렬되어 있음 */
+.image-box {
+  float: left;
+  width: 25%;
+  height: 0;
+  padding-bottom: 25%;
+  /* 테두리를 벗어난 요소 숨김 */
+   overflow: hidden; 
+}
+
+/* layout 안정장치 */
+.imagesWrapper::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.image-box a {
+  display: block;
+  position: relative;
+  color: inherit;  
+}   
+
+/****************************************
+* memo *
+내부 콘텐츠 absolute된 콘텐츠의 기준점 설정
+****************************************/
+
+.image-img {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+  overflow: hidden;
+  /* scale ani */
+  transform: scale(1);
+  transition: all 0.7s ease-in-out; 
+}
+
+.image-img:hover {
+  transform: scale(1.2);
+}
+
+/* 이미지 중앙 설정 */
+.image-fit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: auto;
+}  
+
+.image-contents {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+  background-color: #000;
+  /* hover ani */
+  opacity: 0;
+  transition: all 0.7s ease-in-out;
+}
+
+/* 내부 콘텐츠 중앙 정렬 */
+.image-title, .image-arrow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 14px;
+  font-weight: 200;
+  color: rgb(255, 255, 255);
+}
+
+.image-arrow {
+  color: rgba(255, 255, 255, 0.3);
+  width: 10%;
+  margin-top: 8%;
+}
+
+/* hover 작동 */
+.image-box:hover .image-contents {
+  opacity: 0.8;
+}
+
+/* image box 종료 */
+
+/* media 시작 */
+
+ @media screen and (min-width: 1025px) and (max-width: 1920px) {
+
+  .image-box {
+    width: 25%;
+    padding-bottom: 25%;
+  }
+}
+
+@media screen and (min-width: 751px) and (max-width: 1024px) {
+
+  .image-box {
+    width: 33.3%;
+    padding-bottom: 33.3%;
+  }
+  .ioButton, .subIoButton {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 750px) {
+
+  .image-box {
+    width: 50%;
+    padding-bottom: 50%;
+  }
+  .mainMenu, .ioButton, .navSub, .mainList {
+    display: none;
+  }
+} 
