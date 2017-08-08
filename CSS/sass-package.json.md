@@ -28,11 +28,24 @@
   }
 }
 ```  
+---
 
-> #### 실행 명령어
-> `npm run sass` : sass 컴파일 활성화  
-> `npm run sass-build` : 배포용으로 사용할 --output-style 변경 파일 생성  
-  
+### 실행 명령어
+- `npm run sass` : sass 컴파일 활성화  
+- `npm run sass-build` : 배포용으로 사용할 --output-style 변경 파일 생성  
+
+---
+
+### 진행 방법
+1. `package.json` 파일 생성 : 프로젝트 폴더 내 위치  
+2. `src` → `sass` 폴더 생성 : 초기 폴더 생성  
+3. `scss(sass)` 파일 생성 : 생성한 `sass`폴더 내에 작성할 파일 생성  
+4. 경로 이동 : 커맨드 입력(vscode 터미널, 맥터미널, 깃배쉬 등) 경로를 프로젝트 폴더로 이동
+5. `npm run sass (sass-build)` 실행
+6. 활성화 된 상태에서 `sass파일`을 저장하면 `dist` → `css` → `작업파일.css` 폴더 및 파일 자동 생성
+
+---
+
 ### 목록 설명
 - `name` : `json`을 설정한 코드블록의 이름  
 - `start`: 실행을 위한 입력 명령  
