@@ -27,14 +27,17 @@
     "sass-build": "node-sass -r src/sass -o dist/css/build --output-style compressed"
   }
 }
-```
+```  
 
+> #### 실행 명령어
+> `npm run sass` : sass 컴파일 활성화  
+> `npm run sass-build` : 배포용으로 사용할 --output-style 변경 파일 생성  
+  
+### 목록 설명
 - `name` : `json`을 설정한 코드블록의 이름  
 - `start`: 실행을 위한 입력 명령  
-    - `npm run sass` : sass 컴파일 활성화  
-    - `npm run sass-build` : 배포용으로 사용할 --output-style 변경 파일 생성  
-- `sass` : 컴파일 내용 (유지)  
-- `sass-build` : 배포에 필요한 형태로 변환 (dist/css/ 경로에 build 폴더 생성) (필요시 사용)  
+- `sass` : 컴파일 내용에 대한 설정  
+- `sass-build` : 배포 파일에 필요한 설정 (dist/css/ 경로에 build 폴더 생성) (필요시 사용)  
 
 ---
 
@@ -47,7 +50,7 @@
 - `-output-style` : 출력 스타일  
 - `source-map` : source-map 파일 생성  
 
-> 관촬, 출력 경로 변경 가능  
+> 관찰, 출력 경로 변경 가능  
 
 ---
 
