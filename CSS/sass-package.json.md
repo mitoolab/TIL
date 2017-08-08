@@ -23,14 +23,18 @@
   "description": "package",
   "scripts": {
     "start": "npm run sass",
-    "sass": "node-sass -w -r sass -o css --output-style expanded --source-map-embed",
-    "sass-build": "node-sass -r scss -o css --output-style compressed"
+    "sass": "node-sass -w -r src/sass -o dist/css --output-style expanded --source-map-embed",
+    "sass-build": "node-sass -r src/sass -o dist/css/build --output-style compressed"
   }
 }
 ```
 
- - `name` : `json`을 설정한 코드블록의 이름  
- - `start`: 실행을 위한 입력 명령  
+- `name` : `json`을 설정한 코드블록의 이름  
+- `start`: 실행을 위한 입력 명령  
+    - `npm run sass` : sass 컴파일 활성화  
+    - `npm run sass-build` : 배포용으로 사용할 --output-style 변경 파일 생성  
+- `sass` : 컴파일 내용 (유지)  
+- `sass-build` : 배포에 필요한 형태로 변환 (dist/css/ 경로에 build 폴더 생성) (필요시 사용)  
 
 ---
 
@@ -42,6 +46,8 @@
 - `dist/css` : 출력 장소 의미  
 - `-output-style` : 출력 스타일  
 - `source-map` : source-map 파일 생성  
+
+> 관촬, 출력 경로 변경 가능  
 
 ---
 
