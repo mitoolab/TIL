@@ -68,10 +68,35 @@ DOM 제어 Quiz
   </div>
   <!-- wrapper 종료 -->
   <script>
- 
+
   </script>
 </body>
 </html>
+```
+
+2. `id = one` 으로 접근하여 `className`을 `gray`로 변경하시요.
+```js
+var elem = document.getElementById('one');
+elem.className = 'gray';
+```
+
+3. `qureSelectorAll`을 사용하여 `class = "red"`를 `green`으로 변경하시요. (for문)
+```js
+var elems = document.querySelectorAll('.red');
+  for (var i = 0; i < elems.length; i++) {
+  elems[i].className = 'green';
+```
+
+4. `id = four`에 대해 `setAttribute`을 사용하여 `class = "blue"`를 추가하시오.
+```js
+var four = document.getElementById('four');
+// four에 class 어트리뷰트가 존재하지 않으면
+if (!four.hasAttribute('class')) {
+  // four에 class 어트리뷰트를 추가하고 값으로 'blue'를 설정
+  four.setAttribute('class', 'blue');
+} else { // four에 class 어트리뷰트가 존재하면 className변경
+  four.className = 'blue';
+}
 ```
 
 5. `<h1>`태그와 `<ul>`태그 사이에 `<p class="text">Daliy Quiz</p>` 를 추가하시오. (insertAdjacentHTML() 사용)
