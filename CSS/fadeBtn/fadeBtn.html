@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>fade BOX</title>
+  <style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+  }
+  
+  li {
+    list-style: none;
+  }
+  
+  body {
+    text-align: center;
+  }
+  
+  h1 { 
+    margin: 10vh 0 10vh 0;
+  }
+  
+  button {
+    width: 15%;
+    padding: 30px 0;
+    margin: 0 10px;
+    background: none;
+    border: 1px solid rgb(233,30,29);
+    border-radius: 3px;
+  }
+  
+  button:active {
+    transform: translateY(2px);
+  }
+  
+  .box, .inBox, .outBox {
+    margin: 10vh auto;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(233,30,29);
+    opacity: 0;
+  }
+  
+  .inBox {
+    opacity: 1;
+    transition: opacity 1s ease;
+  }
+  
+  .outBox {
+    opacity: 0;
+    transition: opacity 1s ease;
+  }
+  </style>
+</head>
+<body>
+  <h1>fade-in, fade-out effect with css & js</h1>
+  <!-- <div id="demo"></div> -->
+  <div class="btnBox">
+    <button class="inBtn" type="button">fade in</button>
+    <button class="outBtn" type="button">fade out</button>
+    <div class="box"></div>
+  </div>
+
+  <script>
+  const inBtn = document.querySelector('.inBtn');
+  const outBtn = document.querySelector('.outBtn');
+  const box = document.querySelector('.box');
+
+  inBtn.addEventListener('click', () => {
+    box.className= "inBox";
+  })
+
+  outBtn.addEventListener('click', () => {
+    box.className= "outBox";
+  })
+  </script>
+</body>
+</html>
