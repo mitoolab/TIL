@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Vue Component-Props-For Sample</title>
+</head>
+<body>
+  <div id="app">
+    <todo-item v-bind:todo="todo" v-for="todo in Todos" :key="todo.id"></todo-item>
+   
+    <!-- # 03 -->
+    <!-- todo-list 컴포넌트 등록 -->
+    <todo-list v-bind:passed-data="language" v-for="language in Languages" :key="language.id"></todo-list>
+
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script src="06.Component_Props_quiz_app.js"></script>
+</body>
+</html>

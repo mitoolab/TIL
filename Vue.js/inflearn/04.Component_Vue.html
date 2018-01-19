@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Components</title>
+</head>
+<body>
+  <div id="app">
+    <button>Parent Component</button>
+    <my-component></my-component>
+    <my-local-components></my-local-components>
+  </div>
+
+  <div id="app2">
+    <my-component></my-component>
+    <my-local-components></my-local-components>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script>
+    // Global Component
+    Vue.component('my-component', {
+      template: '<div>A Global component!</div>'
+    });
+
+    // Local Component
+    // 안에 들어갈 내용 먼저 선언
+    var cmp = {
+      template: '<div>A Local component!</div>'
+    }
+
+    // 등록
+    new Vue({
+      el: '#app',
+      components: {
+        // 태그명 : 컴포넌트의 내용
+        'my-local-components': cmp
+      }
+    })
+
+    new Vue({
+      el: '#app2',
+      components: {
+        // 태그명 : 컴포넌트의 내용
+        'my-local-components': cmp
+      }
+    })
+  </script>  
+</body>
+</html>

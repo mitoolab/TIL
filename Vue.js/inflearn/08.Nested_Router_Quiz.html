@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Nested Router</title>
+</head>
+<body>
+  <div id="app">
+    <h1>hello Vue nested Router</h1>
+    <p>
+      <router-link to="/login">Go To Login</router-link>
+      <router-link to="/list">Go To List</router-link>
+      <!-- # 03 -->
+      <!-- '/main'에 반응할 Nested Router 를 아래에 추가하세요. -->
+      <router-link to="/main">Go To Main</router-link>
+    </p>
+    <router-view></router-view>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script src="Vue_Router.js"></script>
+  <script src="08.Nested_Router_app_Quiz.js"></script>
+</body>
+</html>

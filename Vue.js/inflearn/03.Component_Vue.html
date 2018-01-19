@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Componets</title>
+</head>
+<body>
+  <div id="app">
+    <button>Parent Component</button>
+    <my-component></my-component>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script>
+    // component 전역등록
+    Vue.component('my-component', {
+      // template : html에 표시될 내용
+      template: '<div>A custom component!</div>'
+    });
+
+    new Vue({
+      el: '#app'
+    })
+  </script>
+</body>
+</html>

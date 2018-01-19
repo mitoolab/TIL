@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Template Quiz</title>
+</head>
+<body>
+  <div id="app">
+    <header>
+      <!-- # 001 -->
+      <h3>{{ message }}</h3>
+      <h5>{{ message01 }}</h5>
+    </header>
+    <section>
+      <!-- # 002  -->
+      <p v-bind:id="uid"></p>
+
+      <!-- # 003 -->
+      <button v-on:click="clickBtn">alert</button>
+      <button v-on:click="clickBtn2">show alert</button>
+      <!-- <button @click="clickBtn">alert</button> -->
+
+      <!-- # 004 -->
+      <ul v-if="flag">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+      </ul>
+    </section>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script src="09.Template_app.js"></script>
+</body>
+</html>
