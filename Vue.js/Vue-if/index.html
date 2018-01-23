@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style lang="css">
+    #app {
+      text-align: center;
+      margin: 30vh 0;
+    }
+  </style>
+</head>
+<body>
+  
+  <div id="app">
+    <p v-if="show">You Can See Me <span>Hello!</span></p>
+    <p v-else>Not you see me</p>
+    <template v-if="show">
+      <h1>Heading</h1>
+      <p>Inside a Template</p>
+    </template>
+    <p v-show="show">Do you also see me? </p>
+    <button @click="show = !show">Switch</button>
+  </div>
+  
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script>
+  new Vue({
+    el: '#app',
+    data:{
+      show: true
+    }
+  });
+</script>
+</body>
+</html>
